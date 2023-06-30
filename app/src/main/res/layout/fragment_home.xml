@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true"
+    android:id="@+id/topCl"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_100"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_16"
+        app:layout_constraintTop_toBottomOf="@id/view"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:itemCount="4"
+        tools:listitem="@layout/list_item_home"/>
+
+    <include
+        android:id="@+id/addReason"
+        layout="@layout/include_select_option"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view" />
+
+
+    <include layout="@layout/progress_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/pfHome"
+        android:visibility="gone"/>
+
+    <include layout="@layout/include_error_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/neHome"
+        android:visibility="gone"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Radius</string>
+    <string name="select_options">Select options...</string>
+    <string name="add">Add</string>
+    <string name="something_went_wrong_please_try_again_later">Something went wrong, please try again later...</string>
+    <string name="retry">Retry</string>
+</resources>
